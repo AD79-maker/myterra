@@ -1,0 +1,85 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // ===============================================================
+    // Assumed Data Model
+    // ===============================================================
+    //
+    // Collection: users
+    // Fields:
+    //   - email: string (required)
+    //   - displayName: string
+    //   - role: string (admin, user) (required)
+    //
+    // Collection: posts
+    // Fields:
+    //   - title: string (required)
+    //   - content: string (required)
+    //   - category: string (notice, event, guide, news, startup) (required)
+    //   - status: string (draft, published, scheduled) (required)
+    //   - authorId: string (required)
+    //   - isPinned: bool
+    //
+    // Collection: inquiries
+    // Fields:
+    //   - name: string (required)
+    //   - phone: string (required)
+    //   - type: string (resident, non-resident, meeting-room, tour, other) (required)
+    //   - status: string (new, contacted, completed, cancelled) (required)
+    //
+    // ===============================================================
+
+    // ===============================================================
+    // Helper Functions
+    // ===============================================================
+    
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isAuthenticated() &&
+        (get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin' ||
+         (request.auth.token.email == "zzominga79@gmail.com" && request.auth.token.email_verified == true));
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function isValidPost(data) {
+      return data.title is string && data.title.size() > 0 && data.title.size() < 200 &&
+             data.content is string && data.content.size() > 0 && data.content.size() < 50000 &&
+             data.category in ['notice', 'event', 'guide', 'news', 'startup'] &&
+             data.status in ['draft', 'published', 'scheduled'];
+    }
+
+    function isValidInquiry(data) {
+      return data.name is string && data.name.size() > 0 && data.name.size() < 50 &&
+             data.phone is string && data.phone.size() > 0 && data.phone.size() < 20 &&
+             data.type in ['resident', 'non-resident', 'meeting-room', 'tour', 'other'] &&
+             data.status in ['new', 'contacted', 'completed', 'cancelled'];
+    }
+
+    // ===============================================================
+    // Rules
+    // ===============================================================
+
+    match /users/{userId} {
+      allow read: if isOwner(userId) || isAdmin();
+      allow create: if isAuthenticated() && isOwner(userId) && request.resource.data.role == 'user';
+      allow update: if isAdmin() || (isOwner(userId) && request.resource.data.role == resource.data.role);
+    }
+
+    match /posts/{postId} {
+      allow read: if resource.data.status == 'published' || isAdmin();
+      allow write: if isAdmin();
+    }
+
+    match /inquiries/{inquiryId} {
+      allow read: if isAdmin();
+      allow create: if true; // Public can submit inquiries
+      allow update, delete: if isAdmin();
+    }
+  }
+}
