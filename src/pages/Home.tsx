@@ -19,7 +19,7 @@ const Home = () => {
       <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-background-sub">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/images/virtual office_00.jpg" 
+            src="/images/virtual office_00.avif" 
             alt="Premium Office" 
             className="w-full h-full object-cover opacity-20"
             referrerPolicy="no-referrer"
@@ -145,7 +145,7 @@ const Home = () => {
             {/* Non-Resident */}
             <Card className="rounded-3xl border-none shadow-lg overflow-hidden group">
               <div className="h-64 overflow-hidden">
-                <img src="/images/virtual office_01.png" alt="Non-Resident" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" referrerPolicy="no-referrer" />
+                <img src="/images/virtual office_01.avif" alt="Non-Resident" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" referrerPolicy="no-referrer" />
               </div>
               <CardHeader className="p-8">
                 <div className="flex justify-between items-start mb-4">
@@ -241,7 +241,7 @@ const Home = () => {
             </div>
             <div className="flex-1 relative">
               <div className="relative z-10 rounded-[2rem] overflow-hidden shadow-2xl">
-                <img src="/images/main.jpg" alt="Dongtan Night View" className="w-full h-auto" referrerPolicy="no-referrer" />
+                <img src="/images/main.avif" alt="Dongtan Night View" className="w-full h-auto" referrerPolicy="no-referrer" />
               </div>
               <div className="absolute -top-10 -right-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl -z-0"></div>
               <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-0"></div>

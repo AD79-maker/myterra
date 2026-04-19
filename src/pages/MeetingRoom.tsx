@@ -21,8 +21,8 @@ const MeetingRoom = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
           <div className="grid grid-cols-2 gap-4">
-            <img src="/images/meeting 01.png" alt="Meeting Room 1" className="rounded-3xl shadow-lg" referrerPolicy="no-referrer" />
-            <img src="/images/meeting 03.png" alt="Meeting Room 2" className="rounded-3xl shadow-lg mt-8" referrerPolicy="no-referrer" />
+            <img src="/images/meeting 01.avif" alt="Meeting Room 1" className="rounded-3xl shadow-lg" referrerPolicy="no-referrer" />
+            <img src="/images/meeting 03.avif" alt="Meeting Room 2" className="rounded-3xl shadow-lg mt-8" referrerPolicy="no-referrer" />
           </div>
           <div>
             <h3 className="text-3xl font-bold text-primary mb-8">최적의 미팅을 위한 완벽한 장비</h3>

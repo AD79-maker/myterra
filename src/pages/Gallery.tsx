@@ -4,15 +4,15 @@ import { Button } from '../../components/ui/button';
 
 const Gallery = () => {
   const images = [
-    { src: '/images/lounge_02.png', title: '메인 라운지', desc: '깨끗한 카테테리아와 넓은 공용공간' },
-    { src: '/images/room1_2.png', title: '1인실 프라이빗 오피스', desc: '개방감 있는 창과 넓은독립적인 공간' },
-    { src: '/images/room1_3.png', title: '1인실 집중존 오피스', desc: '집중력을 높여주는 아늑하고 독립적인 공간' },
-    { src: '/images/room2_1.png', title: '2인실 팀 오피스', desc: '소규모 팀 프로젝트에 최적화된 넓은 공간' },
-    { src: '/images/meeting 02.png', title: '회의실/미팅룸', desc: '회의용 모니터와 화이트보드 완비된 미팅 공간' },
-    { src: '/images/cafeteria.png', title: '카페테리아', desc: '최고급 원두커피와 다양한 차가 준비된 공간' },
-    { src: '/images/cafeteria2.png', title: 'OA 존', desc: '고성능 복합기와 사무용품이 완비된 구역' },
-    { src: '/images/lounge_01.jpg', title: '복도 및 보안', desc: '철저한 보안 시스템과 정돈된 복도 환경' },
-    { src: '/images/facade.png', title: '입구 파사드', desc: '아늑하고 깨끗한 공유오피스 입구' },
+    { src: '/images/lounge_02.avif', title: '메인 라운지', desc: '깨끗한 카테테리아와 넓은 공용공간' },
+    { src: '/images/room1_2.avif', title: '1인실 프라이빗 오피스', desc: '개방감 있는 창과 넓은독립적인 공간' },
+    { src: '/images/room1_3.avif', title: '1인실 집중존 오피스', desc: '집중력을 높여주는 아늑하고 독립적인 공간' },
+    { src: '/images/room2_1.avif', title: '2인실 팀 오피스', desc: '소규모 팀 프로젝트에 최적화된 넓은 공간' },
+    { src: '/images/meeting 02.avif', title: '회의실/미팅룸', desc: '회의용 모니터와 화이트보드 완비된 미팅 공간' },
+    { src: '/images/cafeteria.avif', title: '카페테리아', desc: '최고급 원두커피와 다양한 차가 준비된 공간' },
+    { src: '/images/cafeteria2.avif', title: 'OA 존', desc: '고성능 복합기와 사무용품이 완비된 구역' },
+    { src: '/images/lounge_01.avif', title: '복도 및 보안', desc: '철저한 보안 시스템과 정돈된 복도 환경' },
+    { src: '/images/facade.avif', title: '입구 파사드', desc: '아늑하고 깨끗한 공유오피스 입구' },
   ];
 
   return (
