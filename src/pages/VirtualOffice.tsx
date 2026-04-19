@@ -20,7 +20,7 @@ const VirtualOffice = () => {
         />
 
         <div className="mb-24 rounded-[3rem] overflow-hidden shadow-xl h-[400px]">
-          <img src="https://picsum.photos/seed/coworking-open/1200/400" alt="Co-working Space" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+          <img src="/images/virtual office_00.jpg" alt="Co-working Space" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
         </div>
 
         {/* Comparison Section */}

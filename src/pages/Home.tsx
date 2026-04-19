@@ -19,7 +19,7 @@ const Home = () => {
       <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-background-sub">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://picsum.photos/seed/office-luxury/1920/1080" 
+            src="/images/virtual office_00.jpg" 
             alt="Premium Office" 
             className="w-full h-full object-cover opacity-20"
             referrerPolicy="no-referrer"
@@ -145,7 +145,7 @@ const Home = () => {
             {/* Non-Resident */}
             <Card className="rounded-3xl border-none shadow-lg overflow-hidden group">
               <div className="h-64 overflow-hidden">
-                <img src="https://picsum.photos/seed/coworking-lounge/800/600" alt="Non-Resident" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" referrerPolicy="no-referrer" />
+                <img src="/images/virtual office_01.png" alt="Non-Resident" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" referrerPolicy="no-referrer" />
               </div>
               <CardHeader className="p-8">
                 <div className="flex justify-between items-start mb-4">
@@ -179,7 +179,7 @@ const Home = () => {
               <CardHeader className="p-8">
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-2xl font-bold">회의실 대관</h3>
-                  <span className="bg-gray-100 text-gray-600 text-xs font-bold px-3 py-1 rounded-full">최대 8인</span>
+                  <span className="bg-gray-100 text-gray-600 text-xs font-bold px-3 py-1 rounded-full">최대 4인</span>
                 </div>
                 <p className="text-base leading-relaxed text-gray-600">
                   중요한 미팅, 세미나, 면접을 위한 전문적인 공간입니다. 
@@ -241,7 +241,7 @@ const Home = () => {
             </div>
             <div className="flex-1 relative">
               <div className="relative z-10 rounded-[2rem] overflow-hidden shadow-2xl">
-                <img src="https://picsum.photos/seed/dongtan-night-park/800/1200" alt="Dongtan Night View" className="w-full h-auto" referrerPolicy="no-referrer" />
+                <img src="/images/main.jpg" alt="Dongtan Night View" className="w-full h-auto" referrerPolicy="no-referrer" />
               </div>
               <div className="absolute -top-10 -right-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl -z-0"></div>
               <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-0"></div>
